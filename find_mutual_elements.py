@@ -10,7 +10,7 @@
 # find_mutual_elements(array)
 # >>>
 # [1, 3]
-
+import time
 
 def find_mutual_elements(array):
     mutuals = set()
@@ -25,10 +25,10 @@ def find_mutual_elements(array):
 
 
 if __name__ == "__main__":
-    array = [
+    start_time = time.time()
+    print(find_mutual_elements([
         [0, 4, 4, 2, 3, 1],
         [1, 4, 8, 7, 3],
         [3, 3, 3, 7, 1],
-    ]
-    mutuals = find_mutual_elements(array)
-    print(f"Mutuals: {mutuals}")
+    ]))
+    print("--- %.10f seconds ---" % (time.time() - start_time))
